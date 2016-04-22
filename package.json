@@ -30,7 +30,7 @@
   "devDependencies": {},
   "scripts": {
     "start": "npm run start:webpack-server | npm run start:node-server",
-    "start:webpack-server": "webpack-dev-server --hot --inline --progress --colors",
+    "start:webpack-server": "BABEL_DISABLE_CACHE=1 webpack-dev-server --hot --inline --progress --colors",
     "start:node-server": "BABEL_DISABLE_CACHE=1 NODE_ENV=development babel-node server.js"
   },
   "author": "",

@@ -6,7 +6,11 @@ module.exports = {
         loaders: [
             {
                 test: /\.css$/,
-                loader: 'style!css?modules&importLoaders=1!postcss'
+                loaders:
+                    [
+                        'css-loader?modules&importLoaders=2&localIdentName=[name]__[local]--[hash:base64:5]',
+                        'postcss-loader',
+                    ]
             },
             {
                 test: /\.js$/,
